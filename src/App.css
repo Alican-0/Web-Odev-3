@@ -1,0 +1,217 @@
+body {
+    background-color: #e6f7ff; 
+    color: #333; 
+    font-family: 'Roboto', sans-serif; 
+    margin: 0;
+    min-height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px; 
+}
+
+.container {
+    max-width: 1050px; 
+    width: 90%; 
+    padding: 35px; 
+    background-color: #fff; 
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); 
+    border-radius: 18px; 
+    border: 3px solid #007bff; 
+    margin: 0;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 700; 
+    color: #0056b3; 
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); 
+    border-bottom: 4px solid #007bff;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #0056b3;
+}
+
+
+.search-filter-area {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 35px;
+    align-items: center;
+}
+
+.arama-input, .kategori-select {
+    padding: 12px;
+    border: 2px solid #007bff; 
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    background-color: #f8fcff;
+    color: #333;
+    transition: all 0.3s ease;
+}
+.arama-input:focus, .kategori-select:focus {
+    border-color: #00bcd4; 
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.8); 
+}
+.arama-input {
+    flex-grow: 1;
+    max-width: 400px;
+}
+.kategori-select {
+    cursor: pointer;
+}
+
+.content-area {
+    display: flex;
+    gap: 40px;
+}
+
+.kitap-listesi-container {
+    flex: 2; 
+}
+
+.favori-panel-container {
+    flex: 1; 
+}
+
+.kitap-karti {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 18px;
+    border: none;
+    border-radius: 12px;
+    background-color: #f7f9fc;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
+    border-left: 6px solid #42a5f5; 
+}
+.kitap-karti:hover {
+    transform: translateY(-5px) rotateZ(-0.5deg); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); 
+}
+
+.kitap-info h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700; 
+    color: #1a1a1a;
+}
+
+.kitap-info p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.kitap-karti .kitap-info p span {
+    font-weight: 700;
+    color: #007bff; 
+    background-color: #e3f2fd; 
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.favori-button {
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 30px; 
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+.favori-button:active {
+    transform: scale(0.95); 
+}
+
+.favori-button:not(.favoride) {
+    background-color: #e3f2fd; 
+    color: #007bff;
+    border-color: #007bff;
+}
+.favori-button:not(.favoride):hover {
+    background-color: #007bff;
+    color: white;
+}
+
+
+.favori-button.favoride {
+    background-color: #ffc107; 
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.favori-button.favoride::before {
+    content: "★ ";
+    font-size: 1.8em; 
+    line-height: 1; 
+}
+.favori-button:not(.favoride)::before {
+    content: "☆ ";
+    font-size: 1.8em; 
+    line-height: 1;
+}
+
+
+.favori-panel {
+    border: 3px dashed #bbdefb;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.favori-panel h2 {
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #0056b3;
+}
+
+.favori-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.favori-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 15px;
+    color: #444;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.kaldir-button {
+    color: #dc3545; 
+    background: none;
+    border: 1px solid #dc3545;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 20px;
+    transition: all 0.2s;
+}
+
+.kaldir-button:hover {
+    color: white;
+    background-color: #dc3545;
+}
+
+.kitap-liste p, .favori-panel p {
+    color: #777;
+    font-style: italic;
+    margin-top: 15px;
+}
