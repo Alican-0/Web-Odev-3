@@ -1,1 +1,1 @@
-[Web Sitesi](web-odev-3.vercel.app)
+[Web Sitesi](https://web-odev-3.vercel.app)
